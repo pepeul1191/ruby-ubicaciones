@@ -1,3 +1,11 @@
 doc
 .yardoc
 tags
+.DS_Store
+log/**/*
+tmp/**/*
+vendor/gems/*
+!vendor/gems/cache/
+.sass-cache/*
+.*.sw*
+Gemfile.lock
