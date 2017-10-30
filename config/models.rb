@@ -1,4 +1,4 @@
-require_relative './datbase'
+require_relative './database'
 
 class EstadoUsuario < Sequel::Model(DB)
   	:estado_usuarios
