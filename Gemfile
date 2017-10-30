@@ -5,6 +5,7 @@ gem "sequel"
 gem "sqlite3"
 gem "rerun"
 gem "puma"
+gem "json"
 
 group :development do
   gem "awesome_print"

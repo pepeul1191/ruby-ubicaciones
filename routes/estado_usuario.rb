@@ -1,5 +1,5 @@
 class MyApp < Sinatra::Base
     get '/estado_usuario/listar' do
-        'estados de usuarios'
+        EstadoUsuario.all.to_a.to_json
     end
 end
