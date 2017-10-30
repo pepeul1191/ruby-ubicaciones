@@ -1,3 +1,4 @@
+
 threads_count_min = ENV.fetch("RAILS_MAX_THREADS") { 0 }.to_i
 threads_count_max = ENV.fetch("RAILS_MAX_THREADS") { 2 }.to_i
 threads threads_count_min, threads_count_max

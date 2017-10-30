@@ -26,4 +26,15 @@ class MyApp < Sinatra::Base
     set :raise_errors, false #false will show nicer error page
     set :show_exceptions, false #true will ignore raise_errors and display backtrace in browser
   end
+
+  before do
+    headers['Access-Control-Allow-Origin'] = '*'
+    headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
+    #headers['Content-type'] = 'text/html; charset=UTF-8'
+    headers['server'] = 'Ruby, Ubuntu'
+  end
+
+  get '/' do
+    'Error: Url Vacía'
+  end
 end
