@@ -1,10 +1,10 @@
 source "http://rubygems.org"
 
 gem "sinatra"
-gem "thin"
 gem "sequel"
 gem "sqlite3"
 gem "rerun"
+gem "puma"
 
 group :development do
   gem "awesome_print"
