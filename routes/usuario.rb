@@ -13,4 +13,8 @@ class MyApp < Sinatra::Base
     	end
     	rpta.to_s
     end
+
+    get '/usuario/listar_accesos/:usuario_id' do
+    	Acceso.select(:id, :momento).where(:usuario_id => params['usuario_id']).all().to_a.to_json
+    end
 end
