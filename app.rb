@@ -9,6 +9,8 @@ class MyApp < Sinatra::Base
   enable :method_override
   enable :sessions
   set :session_secret, 'super secret'
+  set :public_folder, File.dirname(__FILE__) + '/public'
+  set :layout, 'views/layouts'
 
   configure do
     set :app_file, __FILE__
@@ -30,7 +32,7 @@ class MyApp < Sinatra::Base
   before do
     headers['Access-Control-Allow-Origin'] = '*'
     headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
-    #headers['Content-type'] = 'text/html; charset=UTF-8'
+    headers['Content-type'] = 'text/html; charset=UTF-8'
     headers['server'] = 'Ruby, Ubuntu'
   end
 
