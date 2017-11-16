@@ -194,4 +194,41 @@ class MyApp < Sinatra::Base
       return {:tipo_mensaje => 'error', :mensaje => ['Se ha producido un error en asociar/deasociar los roles al usuario', execption.message]}.to_json
     end
   end
+
+  post '/usuario/asociar_permisos' do
+    data = JSON.parse(params[:data])
+	  nuevos = data['nuevos']
+ 	  editados = data['editados']
+	  eliminados = data['eliminados']
+	  usuario_id = data['extra']
+	  usuario_id = data['extra']['usuario_id']
+	  rpta = []
+		error = false
+		execption = nil
+	  DB.transaction do
+			begin
+				if nuevos.length != 0
+					nuevos.each do |nuevo|
+						n = UsuarioPermiso.new(:permiso_id => nuevo['id'], :usuario_id => usuario_id)
+						n.save
+					end
+				end
+				if eliminados.length != 0
+					eliminados.each do |eliminado|
+						UsuarioPermiso.where(:permiso_id => eliminado, :usuario_id => usuario_id).delete
+					end
+				end
+			rescue Exception => e
+				error = true
+				execption = e
+				Sequel::Rollback
+			end
+	  end
+		if error == false
+			{:tipo_mensaje => 'success', :mensaje => ['Se ha registrado la asociación/deasociación de los permisos al usuario', []]}.to_json
+		else
+      status 500
+			{:tipo_mensaje => 'error', :mensaje => ['Se ha producido un error en asociar/deasociar los permisos al usuario', execption.message]}.to_json
+		end
+  end
 end
