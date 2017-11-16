@@ -42,4 +42,25 @@ class MyApp < Sinatra::Base
 		end
 		rpta.to_s
   end
+
+  post '/usuario/correo_repetido' do
+    data = JSON.parse(params[:data])
+    usuario_id = data['id']
+    correo = data['correo']
+    rpta = 0
+    if usuario_id == 'E'
+      #SELECT COUNT(*) AS cantidad FROM usuarios WHERE usuario = ?
+      rpta = Usuario.where(:correo => correo).count
+    else
+      #SELECT COUNT(*) AS cantidad FROM usuarios WHERE usuario = ? AND id = ?
+      rpta = Usuario.where(:correo => correo, :id => usuario_id).count
+      if rpta == 1
+        rpta = 0
+      else
+        #SELECT COUNT(*) AS cantidad FROM usuarios WHERE usuario = ?
+        rpta = Usuario.where(:correo => correo).count
+      end
+    end
+    rpta.to_s
+  end
 end
