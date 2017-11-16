@@ -43,8 +43,6 @@ class MyApp < Sinatra::Base
         execption = e
 			end
 	  end
-
-
     if error == false
       {:tipo_mensaje => 'success', :mensaje => ['Se ha registrado los cambios en los permisos', array_nuevos]}.to_json
     else
