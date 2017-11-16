@@ -63,4 +63,31 @@ class MyApp < Sinatra::Base
     end
     rpta.to_s
   end
+
+  post '/usuario/guardar_usuario_correo' do
+		data = JSON.parse(params[:usuario])
+		error = false
+		execption = nil
+		id = data['id']
+	  usuario = data['usuario']
+ 	  correo = data['correo']
+		DB.transaction do
+			begin
+				e = Usuario.where(:id => id).first
+				e.usuario = usuario
+				e.correo = correo
+				e.save
+			rescue Exception => e
+				error = true
+				execption = e
+				Sequel::Rollback
+			end
+	  end
+		if error == false
+			return {:tipo_mensaje => 'success', :mensaje => ['Se ha registrado los cambios en los datos generales del usuario', []]}.to_json
+		else
+      status 500
+			return {:tipo_mensaje => 'error', :mensaje => ['Se ha producido un error en guardar los datos generales del usuario', execption.message]}.to_json
+		end
+	end
 end
