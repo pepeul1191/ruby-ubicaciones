@@ -17,4 +17,8 @@ class MyApp < Sinatra::Base
   get '/usuario/listar_accesos/:usuario_id' do
     Acceso.select(:id, :momento).where(:usuario_id => params['usuario_id']).all().to_a.to_json
   end
+
+  get '/usuario/obtener_usuario_correo/:usuario_id' do
+    Usuario.select(:usuario, :correo).where(:id => params[:usuario_id]).first.to_json
+  end
 end
