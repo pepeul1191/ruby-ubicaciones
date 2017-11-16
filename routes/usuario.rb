@@ -120,4 +120,41 @@ class MyApp < Sinatra::Base
 			) P
 			ON T.id = P.id').to_a.to_json
   end
+
+  post '/usuario/guardar_sistemas' do
+    data = JSON.parse(params[:data])
+    nuevos = data['nuevos']
+    editados = data['editados']
+    eliminados = data['eliminados']
+    usuario_id = data['extra']
+    usuario_id = data['extra']['usuario_id']
+    rpta = []
+    error = false
+    execption = nil
+    DB.transaction do
+      begin
+        if nuevos.length != 0
+          nuevos.each do |nuevo|
+            n = UsuarioSistema.new(:sistema_id => nuevo['id'], :usuario_id => usuario_id)
+            n.save
+          end
+        end
+        if eliminados.length != 0
+          eliminados.each do |eliminado|
+            UsuarioSistema.where(:sistema_id => eliminado, :usuario_id => usuario_id).delete
+          end
+        end
+      rescue Exception => e
+        Sequel::Rollback
+        error = true
+        execption = e
+      end
+    end
+    if error == false
+      {:tipo_mensaje => 'success', :mensaje => ['Se ha registrado la asociación/deasociación de los sistemas al usuario', []]}.to_json
+    else
+      status 500
+      {:tipo_mensaje => 'error', :mensaje => ['Se ha producido un error en asociar/deasociar los sistemas al usuario', execption.message]}.to_json
+    end
+  end
 end
