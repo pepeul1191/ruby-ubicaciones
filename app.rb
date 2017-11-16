@@ -1,7 +1,5 @@
 require 'sinatra/base'
-#require_relative 'routes/init'
-#require_relative 'helpers/init'
-#require_relative 'models/init'
+require 'json'
 require_relative 'config/routes'
 require_relative 'config/models'
 
