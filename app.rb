@@ -34,6 +34,10 @@ class MyApp < Sinatra::Base
     headers['server'] = 'Ruby, Ubuntu'
   end
 
+  get '/test/conexion' do
+    'Ok'
+  end
+
   get '/' do
     'Error: Url Vacía'
   end
