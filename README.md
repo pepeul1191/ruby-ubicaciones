@@ -18,3 +18,5 @@ Basado en boilerplate wixel de Sinatra. Gestión de las ubicaciones (departament
 
 + https://github.com/Wixel/Frank-Sinatra
 + https://github.com/jeremyevans/sequel
++ http://sequel.jeremyevans.net/rdoc/files/doc/dataset_filtering_rdoc.html
++ http://sequel.jeremyevans.net/rdoc/files/doc/cheat_sheet_rdoc.html
