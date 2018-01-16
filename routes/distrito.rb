@@ -8,7 +8,7 @@ class MyApp < Sinatra::Base
   end
 
   get '/distrito/obtener_distrito_provincia_departamento/:distrito_id' do
-  	DistritoProvinciaDepartamento.where(:id => params['distrito_id']).first().to_json
+  	DistritoProvinciaDepartamento.select(:nombre).where(:id => params['distrito_id']).first().to_json
   end
 
   post '/distrito/guardar' do
