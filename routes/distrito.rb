@@ -7,6 +7,10 @@ class MyApp < Sinatra::Base
   	DistritoProvinciaDepartamento.where(Sequel.like(:nombre, params['nombre'] + '%')).limit(10).to_a.to_json
   end
 
+  get '/distrito/obtener_distrito_provincia_departamento/:distrito_id' do
+  	DistritoProvinciaDepartamento.where(:id => params['distrito_id']).first().to_json
+  end
+
   post '/distrito/guardar' do
     data = JSON.parse(params[:data])
     nuevos = data['nuevos']
