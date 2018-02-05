@@ -1,0 +1,194 @@
+1::Chachapoyas::1
+2::Bagua ::1
+3::Bongara ::1
+4::Condorcanqui::1
+5::Luya ::1
+6::Rodriguez De Mendo::1
+7::Utcubamba::1
+8::Huaraz::2
+9::Aija::2
+10::Antonio Raymondi::2
+11::Asunción::2
+12::Bolognesi::2
+13::Carhuaz::2
+14::Carlos F. Fitzcarrald::2
+15::Casma ::2
+16::Corongo ::2
+17::Huari::2
+18::Huarmey ::2
+19::Huaylas::2
+20::Mariscal Luzuriaga::2
+21::Ocros ::2
+22::Pallasca ::2
+23::Pomabamba::2
+24::Recuay::2
+25::Santa::2
+26::Sihuas ::2
+27::Yungay::2
+28::Abancay::3
+29::Andahuaylas::3
+30::Antabamba::3
+31::Aymaraes::3
+32::Cotabambas::3
+33::Chincheros::3
+34::Grau::3
+35::Arequipa::4
+36::Camana::4
+37::Caraveli::4
+38::Castilla::4
+39::Caylloma::4
+40::Condesuyos::4
+41::Islay::4
+42::La Union ::4
+43::Huamanga::5
+44::Cangallo ::5
+45::Huanca Sancos::5
+46::Huanta::5
+47::La Mar::5
+48::Lucanas::5
+49::Parinacochas::5
+50::Paucar Del Sara Sara::5
+51::Sucre::5
+52::Victor Fajardo::5
+53::Vilcas Huaman::5
+54::Cajamarca::6
+55::Cajabamba::6
+56::Celendin ::6
+57::Chota ::6
+58::Contumaza ::6
+59::Cutervo ::6
+60::Hualgayoc::6
+61::Jaen::6
+62::San Ignacio::6
+63::San Marcos::6
+64::San Miguel ::6
+65::San Pablo::6
+66::Santa Cruz::6
+67::Callao::7
+68::Cusco ::8
+69::Acomayo ::8
+70::Anta::8
+71::Calca::8
+72::Canas ::8
+73::Canchis::8
+74::Chumbivilcas::8
+75::Espinar::8
+76::La Convencion::8
+77::Paruro ::8
+78::Paucartambo::8
+79::Quispicanchi::8
+80::Urubamba::8
+81::Huancavelica::9
+82::Acobamba ::9
+83::Angaraes ::9
+84::Castrovirreyna::9
+85::Churcampa::9
+86::Huaytara::9
+87::Tayacaja::9
+88::Huanuco ::10
+89::Ambo ::10
+90::Dos De Mayo::10
+91::Huacaybamba::10
+92::Huamalies::10
+93::Leoncio Prado::10
+94::Marañón::10
+95::Pachitea ::10
+96::Puerto Inca ::10
+97::Lauricocha ::10
+98::Yarowilca::10
+99::Ica::11
+100::Chincha::11
+101::Nazca ::11
+102::Palpa  ::11
+103::Pisco ::11
+104::Huancayo::12
+105::Concepcion::12
+106::Chanchamayo::12
+107::Jauja::12
+108::Junin ::12
+109::Satipo ::12
+110::Tarma ::12
+111::Yauli::12
+112::Chupaca::12
+113::Trujillo::13
+114::Ascope::13
+115::Bolivar ::13
+116::Chepen ::13
+117::Julcan ::13
+118::Otuzco ::13
+119::Pacasmayo::13
+120::Pataz::13
+121::Sanchez Carrion::13
+122::Santiago De Chuco::13
+123::Gran Chimu::13
+124::Viru::13
+125::Chiclayo::14
+126::Ferreñafe::14
+127::Lambayeque ::14
+128::Lima::15
+129::Barranca ::15
+130::Cajatambo::15
+131::Canta::15
+132::Cañete::15
+133::Huaral ::15
+134::Huarochiri ::15
+135::Huaura::15
+136::Oyon::15
+137::Yauyos ::15
+138::Maynas::16
+139::Alto Amazonas::16
+140::Loreto::16
+141::Mariscal Ramon Castilla::16
+142::Requena ::16
+143::Ucayali ::16
+144::Tambopata ::17
+145::Manu ::17
+146::Tahuamanu::17
+147::Mariscal Nieto::18
+148::General Sanchez Cerro::18
+149::Ilo::18
+150::Pasco::19
+151::Daniel Alcides Carrion::19
+152::Oxapampa::19
+153::Piura::20
+154::Ayabaca::20
+155::Huancabamba::20
+156::Morropon::20
+157::Paita::20
+158::Sullana ::20
+159::Talara ::20
+160::Sechura ::20
+161::Puno::21
+162::Azangaro::21
+163::Carabaya ::21
+164::Chucuito ::21
+165::El Collao  ::21
+166::Huancane ::21
+167::Lampa::21
+168::Melgar ::21
+169::Moho ::21
+170::San Antonio De Putina ::21
+171::San Roman ::21
+172::Sandia ::21
+173::Yunguyo ::21
+174::Moyobamba ::22
+175::Bellavista ::22
+176::El Dorado ::22
+177::Huallaga ::22
+178::Lamas::22
+179::Mariscal Caceres::22
+180::Picota::22
+181::Rioja::22
+182::San Martin  ::22
+183::Tocache ::22
+184::Tacna::23
+185::Candarave::23
+186::Jorge Basadre::23
+187::Tarata::23
+188::Tumbes::24
+189::Contralmirante Villar::24
+190::Zarumilla::24
+191::Coronel Portillo::25
+192::Atalaya::25
+193::Padre Abad::25
+194::Purus::25
